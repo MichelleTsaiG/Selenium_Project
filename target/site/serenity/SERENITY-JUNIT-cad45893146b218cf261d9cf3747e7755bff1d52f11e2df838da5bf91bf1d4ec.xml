@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Search SauceDemo" skipped="0" tests="1" time="19.74" timestamp="2023-02-23 01:14:08"><testcase name="User goes to the about tab, returns to items list, then adds the 4 most expensive items to the cart and checkout"/></testsuite>

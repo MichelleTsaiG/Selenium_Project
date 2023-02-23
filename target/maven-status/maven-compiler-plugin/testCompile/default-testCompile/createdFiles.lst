@@ -1,0 +1,4 @@
+SauceDemo\pageobject\MainPage.class
+SauceDemo\steps\UserSauceDemo.class
+SauceDemo\stepdefinitions\UserStepDefinition.class
+Runner.class

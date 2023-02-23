@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Sauce Demo Automization</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="1ef886e805271e0267e921b89f4508b25605da06c43abf04f0617ce0cdaee92d.html">Search Saucedemo</a></span>
+                > <span class="truncate-60"><a
+                    href="cad45893146b218cf261d9cf3747e7755bff1d52f11e2df838da5bf91bf1d4ec.html">User goes to the about tab, returns to items list, then adds the 4 most expensive items to the cart and checkout </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 23-02-2023 13:14</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Search Saucedemo </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">User goes to the about tab, returns to items list, then adds the 4 most expensive items to the cart and checkout
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given user inputs &lt;username&gt; and &lt;password&gt;<br>And selects Login<br>Then User selects About tab<br>Given returns to items page<br>When filters items from least to most expensive<br>And adds the four most expensive items from the list to the cart<br>Then go to the checkout cart<br>Then go to the user input page<br>Then input &lt;firstName&gt;, &lt;lastName&gt;, and &lt;postalCode&gt;<br>Then check and verify information<br>Then finalize checkout</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="f2c75d2dd5e735bcd4db43d5fd30b26a00bf31b6bff670d95ca2e807daeef596.png" title=" 1: User goes to the about tab, returns to items list, then adds the 4 most expensive items to the cart and checkout ({username=standard_user, password=secret_sauce, firstName=Michelle, lastName=Tsai, postalCode=11300})" width="1920"/>
+                <img src="f2c75d2dd5e735bcd4db43d5fd30b26a00bf31b6bff670d95ca2e807daeef596.png" title=" Given user navigates to https://www.saucedemo.com/" width="1920"/>
+                <img src="64d56a4d7eaa68eda6212498c90fff71c1cc14f4d627f7ed36fbfd08cf24dce5.png" title=" Given user inputs standard_user and secret_sauce" width="1920"/>
+                <img src="f89dd3405cd676a813a7ec3e29feee469399bdc0824798c1d5e48d96343565fb.png" title=" And selects Login" width="1920"/>
+                <img src="594eb50c2f033942174c821edb24b5581736cdd60c960bd61b9304ff18f86f85.png" title=" Then User selects About tab" width="1920"/>
+                <img src="5bacbbaec60e502bfec906ab3bc1e235597b92406b84b44a35b6970a329ab91e.png" title=" Then User selects About tab (completed)" width="1920"/>
+                <img src="5d1d1e6d698c30674fb2d48135fc5e10d70f20f01c927b9f352997a67296e389.png" title=" Given returns to items page" width="1920"/>
+                <img src="69c32f8af80368c3f7cc659b523046b5a49de44787b451bca8660afdc7f69269.png" title=" When filters items from least to most expensive" width="1920"/>
+                <img src="f028d26d41c656c4c04d7d8bf59ce909c7b50a7baaceea9774020d66a379334e.png" title=" And adds the four most expensive items from the list to the cart" width="1920"/>
+                <img src="283de56753f059dea6597c9215608ff27e0fd46a7ff8c527a4243d3aff1fbf73.png" title=" Then go to the checkout cart" width="1920"/>
+                <img src="1a8ec47c92c9c1db77a1e74c3b8f9bc02e50139f5893527387c46a1866c16c80.png" title=" Then go to the user input page" width="1920"/>
+                <img src="0daeb4171300a78c6b98c88dc69c7b7e587e4ab55acb06cc8b74100632b23533.png" title=" Then input Michelle, Tsai, and 11300" width="1920"/>
+                <img src="fc97cfbf5b33098350f48983459164ac07abb38156c8109d4c6977af16d07db6.png" title=" Then check and verify information" width="1920"/>
+                <img src="227caf6871fa0fc9c3b67bef99a702b647b82411ecba8cbc4f882aac253d856d.png" title=" Then finalize checkout" width="1920"/>
+                <img src="227caf6871fa0fc9c3b67bef99a702b647b82411ecba8cbc4f882aac253d856d.png" title=" 1: User goes to the about tab, returns to items list, then adds the 4 most expensive items to the cart and checkout ({username=standard_user, password=secret_sauce, firstName=Michelle, lastName=Tsai, postalCode=11300}) (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.6.12</span>
+</div>
+</body>
+</html>
